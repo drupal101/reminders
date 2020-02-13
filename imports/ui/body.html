@@ -1,0 +1,69 @@
+﻿
+<body>
+  <div class="container-fluid h-100 fill-height">
+  
+	<!-- Header-->
+    <header>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Include google icon fonts -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link href="../fullcalendar/fullcalendar.css" rel="stylesheet">
+		<!-- 	<script type='text/javascript' src='fullcalendar.js'></script>-->
+
+
+    </header>
+
+	<!-- Main body- splits window into 2 sections-->
+	<div class="row">
+		<!-- Column 1 - Left sidebar, full-height. Navigation controls -->
+		<div class="col-md-2  no-float ">     
+			{{>Selected_Details}}
+		</div>
+
+		<!-- Column 2 - Right sidebar. Includes list of existing reminders -->
+		<div class="col-md-10  no-float">  
+
+			<!-- Main calendar-->
+			{{>calendar}}
+			<ul>
+				{{#each tasks}}
+					{{> task}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+  </div>
+</body>
+
+<template name="Selected_Details">
+    <div class="container-fluid">
+       <h1>Reminders</h1>
+
+			<!-- Form for inputing text into new reminder, or updating previous -->
+			<form class="new-task">
+
+				<div class="form-group">
+
+					<label for="FormControlTextarea1">Event Details</label>
+					<input type="text" class="form-control" name="text_Title" id="InputTitle" placeholder="Event Title">
+					<h1> </h1>
+					<textarea class="form-control" id="FormControlTextarea1" rows="5" name="text_Details" placeholder="Event Description" ></textarea>
+
+				</div>
+			</form>
+
+			<!-- Button to create new reminder -->
+			<button class="button">
+				<i class="material-icons md-48 " >add_circle_outline</i>
+			</button>
+
+			<label class="hide-completed">
+				<input type="checkbox"/>
+					Hide Completed Tasks
+			</label>
+    </div>
+</template>

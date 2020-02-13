@@ -1,0 +1,77 @@
+.container-fluid {
+	height: 100%;
+	margin: 0;
+	display:table;
+	width: 100%;
+}
+
+body, html {
+  height: 100%;
+	width: 100%;
+}
+
+/*Full screen columns*/
+
+.col-md-2{
+    background-color: #edeff0;
+}
+
+.col-md-10{
+    background-color: #fafafa;
+	padding-top:10px;
+
+}
+
+.row {
+    height: 100%;
+    display: table-row;
+
+	padding-left: 200px;
+}
+
+.row .no-float {
+  display: table-cell;
+  float: none;
+}
+
+/*-----------------------------------s*/
+/* Calendar */
+    #calendar .fc-today {
+        background: #e6e8e8 !important;
+    }
+
+/*-----------------------------------*/
+/*Icons - Google standards*/
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+
+/* Button themes*/
+.button {
+  background-color: Transparent;
+  border: none;
+  padding: 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+    display:block;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+}
+
+.button:hover {background-color: #8EA8BF}
